@@ -5,11 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoQuest</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Rotating Earth Animation */
+        .earth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .earth {
+            width: 100px;
+            height: 100px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg') no-repeat center center/cover;
+            border-radius: 50%;
+            animation: rotateEarth 10s linear infinite;
+        }
+        @keyframes rotateEarth {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>🌱 EcoQuest: Take Action for the Planet! 🌍</h1>
     </header>
+
+    <div class="earth-container">
+        <div class="earth"></div>
+    </div>
 
     <section>
         <h2>Today's Sustainability Challenge</h2>
